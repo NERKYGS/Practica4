@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Transicion Dia y Noche</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="modo-dia">
+
+    <div class="contenedor-central">
+
+        <!-- 
+        div que contiene las imágenes del sol y la luna.
+        Nos permite manejar las dos imágenes como un grupo y posicionarlas 
+        una encima de la otra si es necesario (por ejemplo, con posición absoluta).
+        -->
+        <div class="ilustracion">
+
+            <!-- 
+                Imagen del sol.
+            -->
+            <img src="https://img.icons8.com/?size=100&id=arTIUtO5zOTy&format=png&color=000000" id="icono-sol" class="icono">
+
+            <!-- 
+                Imagen de la luna.
+            -->
+            <img src="https://img.icons8.com/?size=100&id=njYtiuGq8w1i&format=png&color=000000" id="icono-luna" class="icono oculto">
+        </div>
+
+        <h1>Rotacion de la Tierra</h1>
+
+        <!-- 
+            Párrafo con el mensaje de buenos dias estrellitas la tierra les dice hola.
+        -->
+        <p id="mensaje">¡Buenos dias estrellitas, la tierra les dice hola!</p>
+
+        <!-- 
+            Botón que activa el cambio de modo de dia a noche y vicebersa.
+        -->
+        <button id="interruptor">Hacer de Noche</button>
+    </div>
+
+    <!-- 
+        Enlace al archivo JavaScript externo.
+         Este archivo contiene el código que hace funcionar el interruptor de modo día/noche.
+    -->
+    <script src="edit.js"></script>
+
+</body>
+</html>

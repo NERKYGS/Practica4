@@ -1,0 +1,49 @@
+
+#interruptor:active {
+    transform: translateY(1px); 
+}
+
+/* 
+   Cambia el fondo de toda la página por uno oscuro
+   (el color está guardado en la variable --noche-bg)
+   y el texto lo pone claro
+*/
+body.modo-noche {
+    background-color: var(--noche-bg);
+    color: var(--noche-texto);
+}
+
+/* 
+   Acá le cambiamos el estilo al cuadro blanco del medio
+   (el que tiene el título y el botón). 
+*/
+body.modo-noche .contenedor-central {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 
+   cambia el estilo del boton
+*/
+body.modo-noche #interruptor {
+    background-color: var(--noche-boton);
+    box-shadow: 0 4px 15px rgba(155, 89, 182, 0.4);
+}
+
+/* 
+ 
+   Esto es lo que hace que el sol gire sin parar.
+   Fijate que la animación solo funciona cuando el sol
+   ESTÁ VISIBLE (o sea, cuando NO tiene la clase "oculto").
+*/
+#icono-sol:not(.oculto) {
+    animation: rotar 20s linear infinite;
+}
+
+/* 
+   Y acá definimos cómo es esa vuelta.
+*/
+@keyframes rotar {
+    from { transform: rotate(0deg); } 
+    to { transform: rotate(360deg); } 
+}
